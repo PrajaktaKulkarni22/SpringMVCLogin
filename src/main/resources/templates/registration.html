@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <!--<form th:action="@{/login}" method="get">
+        <button type="submit">Go to login page</button>
+    </form>-->
+
+   <!-- <form th:action="@{/registration}" method="get">
+        <button type="submit">Go to login page</button>
+    </form>-->
+
+    <form th:action="@{/processregister}" th:object="${user}" method="post">
+        <h2>Registration Form</h2>
+
+        <table border="0">
+            <tr>
+                <td><label for="firstname">Firstname</label></td>
+                <td><input type="text" id="firstname" th:field="*{firstName}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="lastname">Lastname</label></td>
+                <td> <input type="text" id="lastname" th:field="*{lastName}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="emailid">Email Id</label></td>
+                <td><input type="text" id="emailid" th:field="*{emailId}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" id="password" th:field="*{password}"></td>
+            </tr>
+
+            <tr>
+        <td><button type="submit">Submit</button></td>
+            </tr>
+
+        </table>
+    </form>
+
+
+
+
+
+
+<!--
+    Welcome to the Spring MVC project..!
+-->
+</body>
+</html>
